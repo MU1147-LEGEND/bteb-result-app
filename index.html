@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>BTEB Result</title>
+</head>
+
+<body class="relative font-primary">
+    <section class="h-full w-full font-primary">
+        <div class="student-form bg-slate-50 text-black min-w-96 min-h-96 m-6 mt-10 p-8 rounded-xl">
+            <form id="form">
+                <h2 class="text-center text-3xl pb-10 pt-10 ">Individual Result</h2>
+                <div class="inputs flex flex-col gap-4 items-center justify-center">
+                    <div class="relative flex flex-col w-4/5">
+                        <span class=" text-gray-600">Exam type: </span>
+                        <input type="text" id="exam" name="exam"
+                            class="border border-black/50 outline-none bg-slate-50 pl-3 py-3" disabled
+                            value="Diploma in Engineering">
+                    </div>
+                    <div class="relative flex flex-col w-4/5">
+                        <span class=" text-gray-600">Regulation: </span>
+
+                        <select name="regulation" id="regulation"
+                            class="border border-black/50 outline-none bg-slate-50 pl-3 py-3">
+                            <option value="2016">2016</option>
+                            <option value="2022" selected>2022</option>
+                        </select>
+                    </div>
+                    <div class="relative flex flex-col w-4/5">
+                        <span class=" text-gray-600 ">Roll: </span>
+                        <input type="number" id="roll" name="roll"
+                            class="border border-black/50 outline-none bg-slate-50 pl-3 py-3">
+                    </div>
+                    <span id="wait" class="text-green-600 "></span>
+                    <input type="submit" id="submit" value="View Result"
+                        class="cursor-pointer inline m-auto bg-blue-600 px-9 py-3 hover:bg-blue-900 active:bg-blue-900 transition-all duration-300 rounded-lg text-white active:translate-y-4">
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- result card section -->
+    <div id="resultCardSection" class="container h-full w-full font-primary absolute top-0 transition-all duration-500 ">
+        <div class="main bg-gray-500 text-white w-[90%] min-h-[580px] m-auto rounded-xl relative">
+            <span id="closeBtn" class="absolute top-2 right-3 text-black bg-white px-1 cursor-pointer">CLOSE</span>
+            <div class="student-info p-6 text-center">
+                <h2 id="show-roll" class="text-2xl"></h2>
+                <p id="institute"></p>
+                <p id="institute-code"></p>
+            </div>
+
+            <!-- semesterwise result manipulated by dom -->
+            <div id="resultHolder" class="pt-4">
+
+            </div>
+        </div>
+    </div>
+    <!-- result card section -->
+    <!-- footer section -->
+    <footer>
+        <p class="text-center text-lg w-[88%] m-auto"> <a href="https://facebook.com/fb.mohammadullah/">
+            Developed by Mohammad Ullah, <br>Student of Badiul Alam Science and Technology Institute
+        </a> </p>
+    </footer>
+
+    <p class="text-center mt-28 opacity-30">Thanks to <a href="https://facebook.com/sakibulislam.dev">Sakibul Islam</a> (BTEB ResultsZone)</p>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
