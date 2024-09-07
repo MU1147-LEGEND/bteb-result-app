@@ -12,6 +12,7 @@ let roll, reg, exam;
 
 view.addEventListener("click", (e) => {
     e.preventDefault();
+        closeBtn.innerText = "CLOSE";
     resCard.style.position = "absolute";
     while (resultHolder.lastChild) {
         resultHolder.removeChild(resultHolder.lastChild);
@@ -116,7 +117,7 @@ roll.addEventListener("input", () => {
     waitMsg.innerText = "";
 });
 closeBtn.addEventListener("click", () => {
-    if (closeBtn.innerText === "CLOSE") {
+    if (closeBtn.innerText === "CLOSE" && resCard.style.position === "absolute") {
         resCard.style.position = "relative";
         closeBtn.innerText = "EXPAND";
     } else {
