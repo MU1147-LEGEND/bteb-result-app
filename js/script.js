@@ -74,7 +74,6 @@ view.addEventListener("click", (e) => {
                     </div>`;
                     resultHolder.appendChild(div);
                 } else if (semesters.reffereds[0].passed) {
-                    // div = document.createElement("div");
 
                     let refSubjects = semesters.reffereds
                         .map((subject) => subject.subject_name)
@@ -105,7 +104,6 @@ view.addEventListener("click", (e) => {
 
                     resultHolder.appendChild(div);
                 } else if (semesters.reffereds[0].passed === false) {
-                    // div = document.createElement("div");
 
                     let refSubjects = semesters.reffereds
                         .map((subject) => subject.subject_name)

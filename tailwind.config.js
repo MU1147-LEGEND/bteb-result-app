@@ -1,13 +1,11 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{html,js}","*.html"],
-  theme: {
-    extend: {
-      fontFamily: {
-        primary : ["Cabin", "sans-serif"]
-      }
-    },
+export const content = ["./src/**/*.{html,js}", "*.html", "./js/*.js"];
+export const theme = {
+  extend: {
+    fontFamily: {
+      primary: ["Cabin", "sans-serif"]
+    }
   },
-  plugins: [],
-}
+};
+export const plugins = [];
 
