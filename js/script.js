@@ -69,7 +69,7 @@ view.addEventListener("click", (e) => {
                         }</p>
                     </div>
                     <div class="cgpa p-3 bg-green-400 text-center">
-                        <p class="text-xl font-bold">CGPA: ${semesters.gpa}</p>
+                        <p class="text-xl font-bold">CGPA: ${(semesters.gpa).toFixed(2)}</p>
                     </div>
                     </div>`;
                     resultHolder.appendChild(div);
