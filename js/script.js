@@ -53,7 +53,7 @@ view.addEventListener("click", (e) => {
             data.semester_results.forEach((elem) => {
                 let semesters = elem.exam_results[0];
                 var div = document.createElement("div");
-                if (semesters.gpa) {
+                if (semesters?.gpa || semesters?.cgpa) {
                     div.innerHTML = `<div class="border border-x-0 border-yellow-300 my-3 pb-1">
                     <div class="info flex justify-between items-center px-6 py-3">
                         <p class="semester">Semester: ${elem.semester}</p>
@@ -69,7 +69,7 @@ view.addEventListener("click", (e) => {
                         }</p>
                     </div>
                     <div class="cgpa p-3 bg-green-400 text-center">
-                        <p class="text-xl font-bold">CGPA: ${(semesters.gpa).toFixed(2)}</p>
+                        <p class="text-xl font-bold">CGPA: ${(semesters?.gpa || semesters?.cgpa).toFixed(2)}</p>
                     </div>
                     </div>`;
                     resultHolder.appendChild(div);
